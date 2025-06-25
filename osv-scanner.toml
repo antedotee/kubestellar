@@ -1,0 +1,7 @@
+[[IgnoredVulns]]
+id = "GO-2025-3521"
+reason = "This vulnerability cannot be fixed"
+
+[[IgnoredVulns]]
+id = "GO-2025-3547"
+reason = "This vulnerability cannot be fixed"
