@@ -5,3 +5,55 @@ reason = "This vulnerability cannot be fixed"
 [[IgnoredVulns]]
 id = "GO-2025-3547"
 reason = "This vulnerability cannot be fixed"
+
+[[IgnoredVulns]]
+id = "GO-2023-2331"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GO-2025-3488"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "PYSEC-2023-117"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-q2x7-8rv6-6q7h"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-hj2j-77xm-mc5v"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-h75v-3vvj-5mfj"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-h5c8-rqwp-cp95"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-g3rq-g295-4j3m"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-fqh9-2qgg-h84h"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-cpwx-vrp4-4pq7"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-8r7q-cvjq-x353"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GHSA-462w-v97r-4m45"
+reason = "Hard to fix, dependencies uses another dependencies which probably has this go version"
+
+[[IgnoredVulns]]
+id = "GO-2024-2631"
+reason = "Not solving it right now as it does a major jump to v4.0"
