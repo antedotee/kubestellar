@@ -60,4 +60,6 @@ jobs:
 
   call-crawl:
     needs: generate-and-push
+    permissions:
+      contents: write
     uses: ./.github/workflows/broken-links-crawler.yml
