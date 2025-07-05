@@ -1,0 +1,43 @@
+name: Trivy
+
+on:
+  push:
+    branches:
+    - "main"
+  schedule:
+  - cron: '55 17 * * 5'
+
+permissions:
+  contents: read
+
+jobs:
+  image-scan:
+    permissions:
+      contents: read  # for actions/checkout to fetch code
+    name: Image Scan
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+
+    - name: Build core image from Dockerfile
+      run: |
+        docker build -f core.Dockerfile -t kubestellar/core:${{ github.sha }} .
+
+    - name: Run Trivy vulnerability scanner on core image
+      uses: aquasecurity/trivy-action@76071ef0d7ec797419534a183b498b4d6366cf37  # v0.31.0
+      with:
+        image-ref: kubestellar/core:${{ github.sha }}
+        exit-code: '1'
+        ignore-unfixed: true
+
+    - name: Build kubectl image from Dockerfile
+      run: |
+        docker build -f hack/Dockerfile.kubectl -t kubestellar/kubectl:${{ github.sha }} hack/
+
+    - name: Run Trivy vulnerability scanner on kubectl image
+      uses: aquasecurity/trivy-action@76071ef0d7ec797419534a183b498b4d6366cf37  # v0.31.0
+      with:
+        image-ref: kubestellar/kubectl:${{ github.sha }}
+        exit-code: '1'
+        ignore-unfixed: true 
