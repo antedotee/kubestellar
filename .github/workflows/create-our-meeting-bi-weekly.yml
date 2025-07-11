@@ -36,6 +36,6 @@ jobs:
       - uses: JasonEtco/create-an-issue@1b14a70e4d8dc185e5cc76d3bec9eab20257b2c5
         if: steps.check_condition.outputs.run_workflow == 'true'
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_ALL_PROJECT_TOKEN }}
+          PAT_TOKEN: ${{ secrets.GH_ALL_PROJECT_TOKEN }}
         with:
           filename: .github/ISSUE_TEMPLATE/community_meeting.md

@@ -20,7 +20,7 @@
 # Working directory must be the project root
 
 # Define the required version of yq
-# GITHUB_TOKEN=
+# PAT_TOKEN=
 set -e
 
 GITHUB_WORKFLOWS_PATH="./.github/workflows"
@@ -31,7 +31,7 @@ TMP_OUTPUT="/tmp/$(date -u -Iseconds | cut -d '+' -f1).json"
 
 ERR_YQ_DOWNLOAD_FAILED=50
 ERR_YQ_NOT_INSTALLED=60
-ERR_GITHUB_TOKEN_INVALID=70
+ERR_PAT_TOKEN_INVALID=70
 ERR_NO_SHA=79
 ERR_ARCH_UNSUPPORTED=80
 ERR_NO_LATEST=86
@@ -96,9 +96,9 @@ _check_yq_version() {
 }
 
 # Check github token
-_check_github_token(){
-    if [[ -z $GITHUB_TOKEN ]]; then
-        _exit_with_error $ERR_GITHUB_TOKEN_INVALID "environment variable GITHUB_TOKEN is not set."
+_check_PAT_TOKEN(){
+    if [[ -z $PAT_TOKEN ]]; then
+        _exit_with_error $ERR_PAT_TOKEN_INVALID "environment variable PAT_TOKEN is not set."
     fi
 }
 
@@ -109,12 +109,12 @@ _fetch_sha_from_upstream_ref() {
     action_ref_safe=$(echo "$action_ref" | cut -d '/' -f 1,2)
     API_GITHUB_BRANCH="https://api.github.com/repos/${action_ref_safe}/git/refs/heads/${tag_or_branch}"
     API_GITHUB_TAG="https://api.github.com/repos/${action_ref_safe}/git/refs/tags/${tag_or_branch}"
-    HTTP_STATUS=$(curl -o "$TMP_OUTPUT" -s -w "%{http_code}" -H "Authorization: Bearer $GITHUB_TOKEN" "$API_GITHUB_TAG")
+    HTTP_STATUS=$(curl -o "$TMP_OUTPUT" -s -w "%{http_code}" -H "Authorization: Bearer $PAT_TOKEN" "$API_GITHUB_TAG")
     if [[ $HTTP_STATUS -ge 200 && $HTTP_STATUS -lt 300 ]]; then
         commit_sha=$(jq -r '.object.sha' $TMP_OUTPUT)
         # _loginfo "tag api $commit_sha"
     else
-        commit_sha=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$API_GITHUB_BRANCH" | jq -r '.object.sha')
+        commit_sha=$(curl -s -H "Authorization: Bearer $PAT_TOKEN" "$API_GITHUB_BRANCH" | jq -r '.object.sha')
         # _loginfo "branch api $commit_sha"
     fi
     _return "$commit_sha"
@@ -154,7 +154,7 @@ _fetch_latest_tag() {
     action_ref=$1
     action_ref_safe=$(echo "$action_ref" | cut -d '/' -f 1,2)
     API_GITHUB_LATEST_RELEASE=https://api.github.com/repos/${action_ref_safe}/releases/latest
-    latest_json=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$API_GITHUB_LATEST_RELEASE")
+    latest_json=$(curl -s -H "Authorization: Bearer $PAT_TOKEN" "$API_GITHUB_LATEST_RELEASE")
     if [ -z "$latest_json" ]; then
         _exit_with_error $ERR_NO_LATEST "GitHub returned empty response to query for latest"
     fi
@@ -282,7 +282,7 @@ run_cli() {
         ;;
     "update-action-version")
         shift
-        _check_github_token
+        _check_PAT_TOKEN
         _check_yq_version
         action_refs=$@
         if [[ "$#" -eq 0 ]]; then
@@ -293,7 +293,7 @@ run_cli() {
         ;;
     "update-reversemap")
         shift
-        _check_github_token
+        _check_PAT_TOKEN
         _check_yq_version
         files=$@
         if [[ "$#" -eq 0 ]]; then

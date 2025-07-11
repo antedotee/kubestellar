@@ -45,21 +45,21 @@ jobs:
           version: latest
           args: release --timeout 60m --clean
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
           USER: ${{ github.actor }}
           EMAIL: ${{ github.actor}}@users.noreply.github.com
 
       - name: Set up Helm
         uses: azure/setup-helm@b9e51907a09c216f16ebe8536097933489208112
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Login to registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.PAT_TOKEN }}
 
       - name: Package and push charts
         run: |
@@ -121,4 +121,4 @@ jobs:
       registry-username: ${{ github.actor }}
       digest: ${{ needs.goreleaser.outputs[format('digest-{0}', matrix.target)] }}
     secrets:
-      registry-password: ${{ secrets.GITHUB_TOKEN }}
+      registry-password: ${{ secrets.PAT_TOKEN }}
