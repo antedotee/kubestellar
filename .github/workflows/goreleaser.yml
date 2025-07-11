@@ -16,6 +16,7 @@ env:
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
+    environment: release
     permissions:
       contents: write
       packages: write
@@ -107,6 +108,7 @@ jobs:
   # Generate SLSA provenance for container images
   image-provenance:
     needs: [goreleaser]
+    environment: release
     strategy:
       matrix:
         target: [controller-manager, ocm-transport-controller]
