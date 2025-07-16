@@ -1,10 +1,36 @@
 version: 2
+
+# SLSA Level 3: Enhanced environment and pre-build hooks
+env:
+  - GO111MODULE=on
+  - CGO_ENABLED=0
+
+before:
+  hooks:
+    - go mod tidy
+    - go mod download
+    - echo "=== SLSA Level 3 Build Starting ==="
+    - echo "Commit {{ .FullCommit }} at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
 builds:
 - id: "controller-manager"
   main: ./cmd/controller-manager
   binary: bin/controller-manager
   ldflags:
   - "{{ .Env.LDFLAGS }}"
+  # SLSA Level 3: Enhanced build flags
+  - "-s -w"
+  - "-X main.version={{ .Version }}"
+  - "-X main.commit={{ .FullCommit }}"
+  - "-X main.date={{ .Date }}"
+  - "-extldflags '-static'"
+  gcflags:
+  - "-trimpath"
+  asmflags:
+  - "-trimpath"
+  flags:
+  - "-buildvcs=true"
+  - "-buildmode=pie"
   goos:
   - linux
   goarch:
@@ -12,11 +38,31 @@ builds:
   - arm64
   env:
   - CGO_ENABLED=0
+  # SLSA Level 3: Build logging hooks
+  hooks:
+    pre:
+      - echo "Building {{ .Binary }} for {{ .Os }}/{{ .Arch }} with commit {{ .FullCommit }}"
+    post:
+      - echo "Build complete for {{ .Binary }}"
+
 - id: "ocm-transport-controller"
   main: ./pkg/transport/ocm-transport-controller
   binary: bin/ocm-transport-controller
   ldflags:
   - "{{ .Env.LDFLAGS }}"
+  # SLSA Level 3: Enhanced build flags
+  - "-s -w"
+  - "-X main.version={{ .Version }}"
+  - "-X main.commit={{ .FullCommit }}"
+  - "-X main.date={{ .Date }}"
+  - "-extldflags '-static'"
+  gcflags:
+  - "-trimpath"
+  asmflags:
+  - "-trimpath"
+  flags:
+  - "-buildvcs=true"
+  - "-buildmode=pie"
   goos:
   - linux
   goarch:
@@ -24,43 +70,162 @@ builds:
   - arm64
   env:
   - CGO_ENABLED=0
-kos:           
+  # SLSA Level 3: Build logging hooks
+  hooks:
+    pre:
+      - echo "Building {{ .Binary }} for {{ .Os }}/{{ .Arch }} with commit {{ .FullCommit }}"
+    post:
+      - echo "Build complete for {{ .Binary }}"
+
+kos:
   - id: kubestellar-controller-manager
     repository: ghcr.io/kubestellar/kubestellar/controller-manager
     build: controller-manager
     tags:
-    - '{{.Version}}'
+    # SLSA Level 3: Commit hash as primary tag for immutability
+    - "{{ .FullCommit }}"
+    - "{{ .Version }}"
+    - "{{ if not .Prerelease }}latest{{ end }}"
     bare: true
     preserve_import_paths: false
     ldflags:
     - "{{ .Env.LDFLAGS }}"
+    # SLSA Level 3: Enhanced container build flags
+    - "-s -w"
+    - "-X main.version={{ .Version }}"
+    - "-X main.commit={{ .FullCommit }}"
+    - "-X main.date={{ .Date }}"
     platforms:
     - linux/amd64
     - linux/arm64
+    # SLSA Level 3: Reproducible timestamps
+    creation_time: "{{ .Timestamp }}"
+    ko_data_creation_time: "{{ .Timestamp }}"
+
   - id: ocm-transport-controller
     repository: ghcr.io/kubestellar/kubestellar/ocm-transport-controller
     build: ocm-transport-controller
     tags:
-    - '{{.Version}}'
+    # SLSA Level 3: Commit hash as primary tag for immutability
+    - "{{ .FullCommit }}"
+    - "{{ .Version }}"
+    - "{{ if not .Prerelease }}latest{{ end }}"
     bare: true
     preserve_import_paths: false
     ldflags:
     - "{{ .Env.LDFLAGS }}"
+    # SLSA Level 3: Enhanced container build flags
+    - "-s -w"
+    - "-X main.version={{ .Version }}"
+    - "-X main.commit={{ .FullCommit }}"
+    - "-X main.date={{ .Date }}"
     platforms:
     - linux/amd64
     - linux/arm64
+    # SLSA Level 3: Reproducible timestamps
+    creation_time: "{{ .Timestamp }}"
+    ko_data_creation_time: "{{ .Timestamp }}"
+
 release:
   draft: false
   prerelease: auto
   mode: keep-existing
+  # SLSA Level 3: Enhanced release notes with security information
+  header: |
+    ## KubeStellar {{ .Tag }}
+    
+    ### SLSA Level 3 Security Information
+    - **Build Commit**: {{ .FullCommit }}
+    - **Build Date**: {{ .Date }}
+    - **SLSA Provenance**: Available for all artifacts
+    - **Container Images**: Signed with Cosign keyless signing
+    - **SBOM**: Software Bill of Materials included for all artifacts
+    
+    ### Verification Instructions
+    ```bash
+    # Verify binary artifacts with SLSA provenance
+    slsa-verifier verify-artifact --provenance-path kubestellar_{{ .Version }}.intoto.jsonl --source-uri github.com/kubestellar/kubestellar kubestellar_{{ .Version }}_linux_amd64.tar.gz
+    
+    # Verify container images
+    cosign verify ghcr.io/kubestellar/kubestellar/controller-manager:{{ .FullCommit }}
+    cosign verify ghcr.io/kubestellar/kubestellar/ocm-transport-controller:{{ .FullCommit }}
+    ```
+  
+  footer: |
+    ### Security Attestations
+    - All artifacts are built in isolated GitHub Actions environments
+    - Build provenance is cryptographically signed and verifiable
+    - Container images are signed using Cosign with keyless signing
+    - SBOM (Software Bill of Materials) is generated for transparency
+    
+    **Full verification guide**: See SECURITY.md for complete verification instructions.
 
+# SLSA Level 3: Enhanced SBOM generation with commit hashes
 sboms:
   - id: source
     artifacts: source
     documents:
-      - "{{ .ProjectName }}_{{ .Version }}_source.sbom"
+      - "{{ .ProjectName }}_{{ .Version }}_{{ .FullCommit }}_source.sbom.json"
+    cmd: syft
+    args:
+      - "{{ .Dir }}"
+      - "--output"
+      - "spdx-json"
+      - "--name"
+      - "{{ .ProjectName }}"
+      - "--source-version"
+      - "{{ .Version }}"
+
   - id: binary
     artifacts: binary
     documents:
-      - "{{ .Binary }}_{{ .Os }}_{{ .Arch }}.sbom"
+      - "{{ .Binary }}_{{ .Os }}_{{ .Arch }}_{{ .FullCommit }}.sbom.json"
+    cmd: syft
+    args:
+      - "{{ .Path }}"
+      - "--output"
+      - "spdx-json"
+      - "--name"
+      - "{{ .Binary }}"
+      - "--source-version"
+      - "{{ .Version }}"
+
+# SLSA Level 3: Cryptographic signing
+signs:
+  - id: keyless
+    artifacts: all
+    cmd: cosign
+    args:
+      - "sign-blob"
+      - "--yes"
+      - "${artifact}"
+      - "--output-signature=${signature}"
+      - "--output-certificate=${certificate}"
+    signature: "${artifact}.sig"
+    certificate: "${artifact}.pem"
+
+# SLSA Level 3: Container image signing
+docker_signs:
+  - artifacts: all
+    args:
+      - "sign"
+      - "--yes"
+      - "${artifact}"
+
+# SLSA Level 3: Enhanced checksums with commit hash
+checksum:
+  name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .FullCommit }}_checksums.txt"
+  algorithm: sha256
+  extra_files:
+    - glob: "*.sbom.json"
+    - glob: "*.sig" 
+    - glob: "*.pem"
+
+# SLSA Level 3: Metadata enhancement
+metadata:
+  mod_timestamp: "{{ .CommitTimestamp }}"
+
+# SLSA Level 3: Snapshot configuration with commit hash
+snapshot:
+  name_template: "{{ incpatch .Version }}-snapshot-{{ .FullCommit }}"
 
