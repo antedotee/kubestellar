@@ -179,14 +179,14 @@ sboms:
   - id: binary
     artifacts: binary
     documents:
-      - "{{ .Binary }}_{{ .Os }}_{{ .Arch }}_{{ .FullCommit }}.sbom.json"
+      - "{{ .ArtifactName }}_{{ .FullCommit }}.sbom.json"
     cmd: syft
     args:
-      - "{{ .Path }}"
+      - "$artifact"
       - "--output"
-      - "spdx-json"
+      - "spdx-json=$document"
       - "--name"
-      - "{{ .Binary }}"
+      - "{{ .ProjectName }}"
       - "--source-version"
       - "{{ .Version }}"
 
