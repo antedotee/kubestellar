@@ -41,9 +41,9 @@ builds:
   # SLSA Level 3: Build logging hooks
   hooks:
     pre:
-      - echo "Building {{ .Binary }} for {{ .Os }}/{{ .Arch }} with commit {{ .FullCommit }}"
+      - echo "Building controller-manager for {{ .Os }}/{{ .Arch }} with commit {{ .FullCommit }}"
     post:
-      - echo "Build complete for {{ .Binary }}"
+      - echo "Build complete for {{ .Path }}"
 
 - id: "ocm-transport-controller"
   main: ./pkg/transport/ocm-transport-controller
@@ -73,9 +73,9 @@ builds:
   # SLSA Level 3: Build logging hooks
   hooks:
     pre:
-      - echo "Building {{ .Binary }} for {{ .Os }}/{{ .Arch }} with commit {{ .FullCommit }}"
+      - echo "Building ocm-transport-controller for {{ .Os }}/{{ .Arch }} with commit {{ .FullCommit }}"
     post:
-      - echo "Build complete for {{ .Binary }}"
+      - echo "Build complete for {{ .Path }}"
 
 kos:
   - id: kubestellar-controller-manager
