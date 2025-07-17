@@ -151,24 +151,65 @@ kubectl --context "kind-${name}" patch deployment ingress-nginx-controller -n in
 
 if [[ "$wait" == "true" ]] ; then
   echo "Waiting for nginx ingress with SSL passthrough to be ready..."
+  
+  # Add timeout for the wait loop to prevent infinite hanging
+  wait_timeout=300  # 5 minutes
+  wait_start=$(date +%s)
+  
   while true; do
-      sleep 5
-      pods=$(kubectl --context kind-${name} get pod -n ingress-nginx -l app.kubernetes.io/component=controller -o jsonpath='{.items[*].metadata.name}')
-      if [ -z "$pods" ]; then continue; fi
-      if [[ "$pods" =~ [[:space:]] ]]
-      then # both pre-patch and post-patch Pods are present
-          continue
+      current_time=$(date +%s)
+      elapsed=$((current_time - wait_start))
+      
+      if [ $elapsed -gt $wait_timeout ]; then
+        echo "ERROR: Timeout waiting for nginx ingress with SSL passthrough after ${wait_timeout} seconds" >&2
+        exit 1
       fi
-      args=$(kubectl --context kind-${name} get pod -n ingress-nginx -l app.kubernetes.io/component=controller -o jsonpath='{.items[0].spec.containers[0].args}')
-      if [[ $args =~ enable-ssl-passthrough ]]
-      then break
-      # Otherwise this Pod is from before the patch
+      
+      sleep 5
+      
+      # Get running controller pods
+      running_pods=$(kubectl --context kind-${name} get pod -n ingress-nginx -l app.kubernetes.io/component=controller --field-selector=status.phase=Running -o jsonpath='{.items[*].metadata.name}' 2>/dev/null)
+      kubectl_exit_code=$?
+      
+      if [ $kubectl_exit_code -ne 0 ] || [ -z "$running_pods" ]; then 
+        echo "  Still waiting for ingress controller pods to be running..."
+        continue
+      fi
+      
+      # Count running pods (check for multiple pods during rollout)
+      pod_count=$(echo "$running_pods" | wc -w)
+      
+      if [ "$pod_count" -gt 1 ]; then
+        echo "  Found $pod_count running pods, waiting for rollout to complete..."
+        continue
+      fi
+      
+      # Verify the single running pod has SSL passthrough enabled
+      pod_name=$(echo "$running_pods" | awk '{print $1}')
+      args=$(kubectl --context kind-${name} get pod -n ingress-nginx "$pod_name" -o jsonpath='{.spec.containers[0].args}' 2>/dev/null)
+      
+      if [[ "$args" =~ enable-ssl-passthrough ]]; then
+        echo "  Found running pod with SSL passthrough: $pod_name"
+        break
+      else
+        echo "  Pod $pod_name is running but doesn't have SSL passthrough yet..."
+        continue
       fi
   done
+  
+  echo "  Performing final readiness check..."
   kubectl --context "kind-${name}" wait --namespace ingress-nginx \
     --for=condition=ready pod \
     --selector=app.kubernetes.io/component=controller \
-    --timeout=24h
+    --timeout=120s
+    
+  # Verify SSL passthrough is actually working
+  if ! kubectl --context "kind-${name}" get pod -n ingress-nginx -l app.kubernetes.io/component=controller -o jsonpath='{.items[0].spec.containers[0].args}' | grep -q "enable-ssl-passthrough"; then
+    echo "ERROR: SSL passthrough configuration verification failed" >&2
+    exit 1
+  fi
+  
+  echo "  SSL passthrough configuration verified successfully!"
 fi
 
 
