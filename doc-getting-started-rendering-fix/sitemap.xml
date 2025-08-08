@@ -561,6 +561,14 @@
          
     </url>
     <url>
+         <loc>https://docs.kubestellar.io/doc-getting-started-rendering-fix/direct/user-guide/get-started/</loc>
+         <lastmod>2025-08-08</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-getting-started-rendering-fix/en/direct/user-guide/get-started/"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-getting-started-rendering-fix/fr/direct/user-guide/get-started/"/>
+         
+    </url>
+    <url>
          <loc>https://docs.kubestellar.io/doc-getting-started-rendering-fix/ui-docs/</loc>
          <lastmod>2025-08-08</lastmod>
          <changefreq>daily</changefreq>
