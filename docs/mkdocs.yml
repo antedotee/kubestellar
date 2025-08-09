@@ -1,22 +1,7 @@
 site_name: KubeStellar
 repo_url: https://github.com/kubestellar/kubestellar
 site_url: https://docs.kubestellar.io/
-
-repo_short_name: kubestellar/kubestellar
-repo_default_file_path: kubestellar
-helm_repo_short_name: kubestellar/helm
-helm_repo_default_file_path: helm
-brew_repo_short_name: kubestellar/homebrew-kubestellar
-brew_repo_default_file_path: homebrew-kubestellar
-docs_url: https://docs.kubestellar.io
-repo_raw_url: https://raw.githubusercontent.com/kubestellar/kubestellar
 edit_uri: edit/main/docs/content
-ks_branch: 'main'
-ks_tag: 'latest'
-ks_latest_regular_release: '0.28.0'
-ks_latest_release: '0.28.0'
-
-ks_kind_port_num: '1119'
 
 # Site content
 docs_dir: 'content'
@@ -172,6 +157,20 @@ theme:
       primary: light blue
       accent: cyan
 extra:
+  # Custom variables used throughout the docs via {{ config.<var> }}
+  repo_short_name: kubestellar/kubestellar
+  repo_default_file_path: kubestellar
+  helm_repo_short_name: kubestellar/helm
+  helm_repo_default_file_path: helm
+  brew_repo_short_name: kubestellar/homebrew-kubestellar
+  brew_repo_default_file_path: homebrew-kubestellar
+  docs_url: https://docs.kubestellar.io
+  repo_raw_url: https://raw.githubusercontent.com/kubestellar/kubestellar
+  ks_branch: 'main'
+  ks_tag: 'latest'
+  ks_latest_regular_release: '0.28.0'
+  ks_latest_release: '0.28.0'
+  ks_kind_port_num: '1119'
   # social:
   #   - icon: fontawesome/brands/github
   #     link: 'https://github.com/kubestellar/kubestellar'
