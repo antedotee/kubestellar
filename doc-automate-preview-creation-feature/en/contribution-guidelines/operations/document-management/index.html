@@ -4397,7 +4397,7 @@ rendering take precedence.</p>
 </ol>
 <p>No action is required from contributors beyond opening the PR; the preview link will appear automatically in a PR comment.</p>
 <h3 id="serving-up-documents-globally-from-a-fork-of-the-repository-via-github">Serving up documents globally from a fork of the repository via GitHub<a class="headerlink" href="#serving-up-documents-globally-from-a-fork-of-the-repository-via-github" title="Permanent link">#</a></h3>
-<p>You can take advantage of <a href="https://github.com/kubestellar/kubestellar/blob/v0.28.0/.github/workflows/docs-gen-and-push.yml">the "Generate and Push Docs" GitHub Actions workflow</a>---invoked either explicitly in the GitHub web UI or implicitly by a branch naming convention---to create an online, shareable rendering of the website.
+<p>You can take advantage of <a href="https://github.com/kubestellar/kubestellar/blob/v{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_latest_release'] }}/.github/workflows/docs-gen-and-push.yml">the "Generate and Push Docs" GitHub Actions workflow</a>---invoked either explicitly in the GitHub web UI or implicitly by a branch naming convention---to create an online, shareable rendering of the website.
 This is particularly useful for documentation PRs, as it allows you to share a preview of your proposed changes directly via a URL to a working website.
 To take advantage of this action, you must (a) limit the character set used in the name of your branch and (b) ensure that your fork is properly set up for using <a href="https://pages.github.com/">GitHub Pages</a>. Your branch name should consist only of alphanumerics and dashes and dots. Fork setup for GitHub Pages entails two things: having a version of the branch named <code>gh-pages</code>, and configuring GitHub to publish a website based on that branch.</p>
 <p>The name of your branch equals the "version" of the website where the rendering appears.</p>
@@ -4482,9 +4482,9 @@ More details on these techniques will be added here soon.</p>
 <hr />
 <h3 id="serving-up-documents-locally">Serving up documents locally<a class="headerlink" href="#serving-up-documents-locally" title="Permanent link">#</a></h3>
 <p>You can view and modify our documentation in your local development environment.  Simply checkout one of our branches.</p>
-<div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:kubestellar/kubestellar.git
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>kubestellar/docs
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+<div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:<span class="o">{{</span><span class="w"> </span>no<span class="w"> </span>such<span class="w"> </span>element:<span class="w"> </span>mkdocs.config.defaults.MkDocsConfig<span class="w"> </span>object<span class="o">[</span><span class="s1">&#39;repo_short_name&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">}}</span>.git
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span><span class="o">{{</span><span class="w"> </span>no<span class="w"> </span>such<span class="w"> </span>element:<span class="w"> </span>mkdocs.config.defaults.MkDocsConfig<span class="w"> </span>object<span class="o">[</span><span class="s1">&#39;repo_default_file_path&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">}}</span>/docs
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git<span class="w"> </span>checkout<span class="w"> </span><span class="o">{{</span><span class="w"> </span>no<span class="w"> </span>such<span class="w"> </span>element:<span class="w"> </span>mkdocs.config.defaults.MkDocsConfig<span class="w"> </span>object<span class="o">[</span><span class="s1">&#39;ks_branch&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">}}</span>
 </code></pre></div>
 <p>You can view and modify our documentation in the branch you have checked out by using <code>mkdocs serve</code> from <a href="https://www.mkdocs.org">mkdocs</a>.  We have a Python requirements file in <code>requirements.txt</code>, and a Makefile target that builds a Python virtual environment and installs the requirements there.  You can either install those requirements into your global Python environment or use the Makefile target.  To install those requirements into your global Python environment, do the following usual thing.</p>
 <div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
@@ -4498,11 +4498,11 @@ More details on these techniques will be added here soon.</p>
 </code></pre></div>
 Then open a browser to <a href="http://localhost:8000/"><code>http://localhost:8000/</code></a></p>
 <p>Another way to view (not modify - this method reflects what has been deployed to the <code>gh-pages</code> branch of our repo) all branches/versions of our documentation locally using 'mike' <a href="https://github.com/jimporter/mike">mike for mkdocs</a>:</p>
-<p><div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:kubestellar/kubestellar.git
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>kubestellar
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+<p><div class="language-shell highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:<span class="o">{{</span><span class="w"> </span>no<span class="w"> </span>such<span class="w"> </span>element:<span class="w"> </span>mkdocs.config.defaults.MkDocsConfig<span class="w"> </span>object<span class="o">[</span><span class="s1">&#39;repo_short_name&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">}}</span>.git
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span><span class="o">{{</span><span class="w"> </span>no<span class="w"> </span>such<span class="w"> </span>element:<span class="w"> </span>mkdocs.config.defaults.MkDocsConfig<span class="w"> </span>object<span class="o">[</span><span class="s1">&#39;repo_default_file_path&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">}}</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>git<span class="w"> </span>checkout<span class="w"> </span><span class="o">{{</span><span class="w"> </span>no<span class="w"> </span>such<span class="w"> </span>element:<span class="w"> </span>mkdocs.config.defaults.MkDocsConfig<span class="w"> </span>object<span class="o">[</span><span class="s1">&#39;ks_branch&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">}}</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">cd</span><span class="w"> </span>docs
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>mike<span class="w"> </span>set-default<span class="w"> </span>main
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>mike<span class="w"> </span>set-default<span class="w"> </span><span class="o">{{</span><span class="w"> </span>no<span class="w"> </span>such<span class="w"> </span>element:<span class="w"> </span>mkdocs.config.defaults.MkDocsConfig<span class="w"> </span>object<span class="o">[</span><span class="s1">&#39;ks_branch&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">}}</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nb">cd</span><span class="w"> </span>..
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>make<span class="w"> </span>serve-docs
 </code></pre></div>
@@ -4511,7 +4511,7 @@ Then open a browser to <a href="http://localhost:8000/"><code>http://localhost:8
 <h2 id="supported-aliases-for-our-documentation">Supported aliases for our documentation<a class="headerlink" href="#supported-aliases-for-our-documentation" title="Permanent link">#</a></h2>
 <p><code>mike</code> has a concept of aliases. We currently maintain only one alias.</p>
 <ul>
-<li><code>latest</code> (<a href="https://docs.kubestellar.io/latest">https://docs.kubestellar.io/latest</a>), for the latest regular release.</li>
+<li><code>latest</code> (<a href="https://docs.kubestellar.io/latest">{{ no such element: mkdocs.config.defaults.MkDocsConfig object['docs_url'] }}/latest</a>), for the latest regular release.</li>
 </ul>
 <p>The publishing workflow updates these aliases. The latest regular release is determined by picking the first version listed by <code>mike list</code> that matches the regexp <code>release-[0-9.]*</code>.</p>
 <h2 id="publishing-from-the-branch-named-main">Publishing from the branch named "main"<a class="headerlink" href="#publishing-from-the-branch-named-main" title="Permanent link">#</a></h2>
@@ -4521,7 +4521,7 @@ aliasing, because that only <em>adds</em> a version. The branch named "main"
 is published as the version named "unreleased-development".</p>
 <h2 id="shortcut-urls">Shortcut URLs<a class="headerlink" href="#shortcut-urls" title="Permanent link">#</a></h2>
 <p>We have a few shortcut urls that come in handy when referring others to our project:</p>
-<p><b>note:</b> You need to join our mailing list first to get access to some of the links that follow (<a href="https://kubestellar.io/joinus">https://docs.kubestellar.io/joinus</a>)</p>
+<p><b>note:</b> You need to join our mailing list first to get access to some of the links that follow (<a href="https://kubestellar.io/joinus">{{ no such element: mkdocs.config.defaults.MkDocsConfig object['docs_url'] }}/joinus</a>)</p>
 <ul>
 <li><a href="https://kubestellar.io/agenda">https://kubestellar.io/agenda</a> - our community meeting agenda google doc</li>
 <li><a href="https://kubestellar.io/blog">https://kubestellar.io/blog</a> - our medium reading list</li>
@@ -4590,19 +4590,19 @@ scripts in <code>hack</code>).</p>
 </tbody>
 </table>
 <h3 id="global-variables">Global Variables<a class="headerlink" href="#global-variables" title="Permanent link">#</a></h3>
-<p>There are many global variables defined in the <a href="https://raw.githubusercontent.com/kubestellar/kubestellar/main/docs/mkdocs.yml">docs/mkdocs.yml</a>.  The following are some very common variables you are encouraged to use in our documentation.  Use of these variables/macros allows our documentation to have github branch context and take advantage of our evolution without breaking</p>
+<p>There are many global variables defined in the <a href="{{ no such element: mkdocs.config.defaults.MkDocsConfig object['repo_raw_url'] }}/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/docs/mkdocs.yml">docs/mkdocs.yml</a>.  The following are some very common variables you are encouraged to use in our documentation.  Use of these variables/macros allows our documentation to have github branch context and take advantage of our evolution without breaking</p>
 <div class="language-text highlight"><pre><span></span><code>- site_name: KubeStellar
 - repo_url: https://github.com/kubestellar/kubestellar
 - site_url: https://docs.kubestellar.io/doc-automate-preview-creation-feature
-- repo_default_file_path: kubestellar
-- repo_short_name: kubestellar/kubestellar
-- docs_url: https://docs.kubestellar.io
-- repo_raw_url: https://raw.githubusercontent.com/kubestellar/kubestellar
+- repo_default_file_path: {{ no such element: mkdocs.config.defaults.MkDocsConfig object[&#39;repo_default_file_path&#39;] }}
+- repo_short_name: {{ no such element: mkdocs.config.defaults.MkDocsConfig object[&#39;repo_short_name&#39;] }}
+- docs_url: {{ no such element: mkdocs.config.defaults.MkDocsConfig object[&#39;docs_url&#39;] }}
+- repo_raw_url: {{ no such element: mkdocs.config.defaults.MkDocsConfig object[&#39;repo_raw_url&#39;] }}
 - edit_uri: edit/main/docs/content/
-- ks_branch: main
-- ks_tag: latest
-- ks_latest_regular_release: 0.28.0
-- ks_latest_release: 0.28.0
+- ks_branch: {{ no such element: mkdocs.config.defaults.MkDocsConfig object[&#39;ks_branch&#39;] }}
+- ks_tag: {{ no such element: mkdocs.config.defaults.MkDocsConfig object[&#39;ks_tag&#39;] }}
+- ks_latest_regular_release: {{ no such element: mkdocs.config.defaults.MkDocsConfig object[&#39;ks_latest_regular_release&#39;] }}
+- ks_latest_release: {{ no such element: mkdocs.config.defaults.MkDocsConfig object[&#39;ks_latest_release&#39;] }}
 </code></pre></div>
 <p>to use a variables/macro in your documentation reference like this:</p>
 <p>{{ config.&lt;var_name&gt; }}</p>
@@ -4611,7 +4611,7 @@ scripts in <code>hack</code>).</p>
 <p><b>note:</b><br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;- We also check for broken links as part of our PR pipeline.  For more information check out our <a href="https://github.com/kubestellar/kubestellar/actions/workflows/broken-links-crawler.yml">Broken Links Crawler</a><br /></p>
 <h3 id="navigation-website-menu">Navigation (website menu)<a class="headerlink" href="#navigation-website-menu" title="Permanent link">#</a></h3>
-<p>The navigation for the documentation is <em>also</em> configured in  <a href="https://raw.githubusercontent.com/kubestellar/kubestellar/main/docs/mkdocs.yml">docs/mkdocs.yml</a>.
+<p>The navigation for the documentation is <em>also</em> configured in  <a href="{{ no such element: mkdocs.config.defaults.MkDocsConfig object['repo_raw_url'] }}/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/docs/mkdocs.yml">docs/mkdocs.yml</a>.
 The section which begins with <strong>nav:</strong> lays out the navigation structure and which markdown files correspond to each topic. </p>
 <h3 id="page-variables">Page variables<a class="headerlink" href="#page-variables" title="Permanent link">#</a></h3>
 <p>A markdown source file can contribute additional variables by defining them in <code>name: value</code> lines at the start of the file, set off by lines of triple dashes. For example, suppose a markdown file begins with the following.</p>
@@ -4718,7 +4718,7 @@ The section which begins with <strong>nav:</strong> lays out the navigation stru
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>echo hello KubeStellar
 </code></pre></div>
 <br/></p>
-<p>(other variations are possible, PR an update to the <a href="https://github.com/kubestellar/kubestellar/blob/main/docs/overrides/stylesheets/kubestellar.css">kubestellar.css</a> file and, once approved, use the style on the plain codeblock in your documentation.)</p>
+<p>(other variations are possible, PR an update to the <a href="https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/docs/overrides/stylesheets/kubestellar.css">kubestellar.css</a> file and, once approved, use the style on the plain codeblock in your documentation.)</p>
 <h3 id="testingrunning-docs">Testing/Running Docs<a class="headerlink" href="#testingrunning-docs" title="Permanent link">#</a></h3>
 <p>How do we ensure that our documented examples work?  Simple, we 'execute' our documentation in our CI.  We built automation called 'docs-ecutable' which can be invoked to test any markdown (.md) file in our repository. You could use it in your project as well - afterall it is opensource.</p>
 <h4 id="the-way-it-works">The way it works:<a class="headerlink" href="#the-way-it-works" title="Permanent link">#</a></h4>
@@ -4734,12 +4734,12 @@ The section which begins with <strong>nav:</strong> lays out the navigation stru
 </ul>
 <h4 id="the-github-workflow">The GitHub Workflow:<a class="headerlink" href="#the-github-workflow" title="Permanent link">#</a></h4>
 <ul>
-<li>One example of the GitHub Workflow is located in our kubestellar/kubestellar at <a href="https://github.com/kubestellar/kubestellar/blob/main/.github/workflows/docs-ecutable-where-resolver.yml">https://github.com/kubestellar/kubestellar/blob/main/.github/workflows/docs-ecutable-where-resolver.yml</a></li>
-<li>An example workflow using the newer technology is located in our kubestellar/kubestellar repo at <a href="https://github.com/kubestellar/kubestellar/blob/main/.github/workflows/docs-ecutable-example1.yml">https://github.com/kubestellar/kubestellar/blob/main/.github/workflows/docs-ecutable-example1.yml</a></li>
+<li>One example of the GitHub Workflow is located in our {{ no such element: mkdocs.config.defaults.MkDocsConfig object['repo_short_name'] }} at <a href="https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/.github/workflows/docs-ecutable-where-resolver.yml">https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/.github/workflows/docs-ecutable-where-resolver.yml</a></li>
+<li>An example workflow using the newer technology is located in our {{ no such element: mkdocs.config.defaults.MkDocsConfig object['repo_short_name'] }} repo at <a href="https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/.github/workflows/docs-ecutable-example1.yml">https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/.github/workflows/docs-ecutable-example1.yml</a></li>
 </ul>
 <h4 id="the-original-secret-sauce">The original secret sauce:<a class="headerlink" href="#the-original-secret-sauce" title="Permanent link">#</a></h4>
 <ul>
-<li>The original code that made all this possible is at <a href="https://github.com/kubestellar/kubestellar/blob/main/docs/scripts/docs-ecutable.sh">https://github.com/kubestellar/kubestellar/blob/main/docs/scripts/docs-ecutable.sh</a><ul>
+<li>The original code that made all this possible is at <a href="https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/docs/scripts/docs-ecutable.sh">https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/docs/scripts/docs-ecutable.sh</a><ul>
 <li>This code parses the .md file you give it to pull out all the 'shell' and '.bash .hide-me' blocks</li>
 <li>The code is smart enough to traverse the include-markdown blocks and include the 'shell' and '.bash .hide-me' blocks in them</li>
 <li>The Jinja constructs are not expanded by this code.</li>
@@ -4747,7 +4747,7 @@ The section which begins with <strong>nav:</strong> lays out the navigation stru
 </ul>
 </li>
 </ul>
-<p>All of this is invoke in a target in our <a href="https://github.com/kubestellar/kubestellar/blob/main/Makefile">Makefile</a>
+<p>All of this is invoke in a target in our <a href="https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/Makefile">Makefile</a>
 <div class="language-bash no-copy highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>.PHONY:<span class="w"> </span>docs-ecutable
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>docs-ecutable:<span class="w"> </span>
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nv">MANIFEST</span><span class="o">=</span><span class="k">$(</span>MANIFEST<span class="k">)</span><span class="w"> </span>docs/scripts/docs-ecutable.sh
@@ -4758,7 +4758,7 @@ The section which begins with <strong>nav:</strong> lays out the navigation stru
 <p><b>note:</b> there are single and double-quotes used here to avoid issues with 'spaces' used in files names or directories.  Use the single and double-quotes as specified in the quickstart example here.</p>
 <h4 id="the-new-and-improved-secret-sauce">The new and improved secret sauce:<a class="headerlink" href="#the-new-and-improved-secret-sauce" title="Permanent link">#</a></h4>
 <ul>
-<li>The newer code for executing bash snippets in documentation is at <a href="https://github.com/kubestellar/kubestellar/blob/main/docs/scripts/execute-html.sh">https://github.com/kubestellar/kubestellar/blob/main/docs/scripts/execute-html.sh</a><ul>
+<li>The newer code for executing bash snippets in documentation is at <a href="https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/docs/scripts/execute-html.sh">https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/docs/scripts/execute-html.sh</a><ul>
 <li>This code parses the HTML generated by MkDocs to extract all the fenced code blocks tagged for the "shell" language.</li>
 <li>This HTML scraping is relatively easy because it does not have to work on general HTML but only the HTML generated by <em>our</em> stack from <em>our</em> sources. The use of the option setting <code>pygments_lang_class: true</code> for the Python-Markdown extension <code>pymdownx.highlight</code> plays a critical role, getting the source language into the generated HTML.</li>
 <li>Because it reads the generated HTML, invisible code blocks are not extracted.</li>
@@ -4768,7 +4768,7 @@ The section which begins with <strong>nav:</strong> lays out the navigation stru
 </ul>
 </li>
 </ul>
-<p>All of this is invoked in a target in our <a href="https://github.com/kubestellar/kubestellar/blob/main/Makefile">Makefile</a>
+<p>All of this is invoked in a target in our <a href="https://github.com/kubestellar/kubestellar/blob/{{ no such element: mkdocs.config.defaults.MkDocsConfig object['ks_branch'] }}/Makefile">Makefile</a>
 <div class="language-bash no-copy highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>.PHONY:<span class="w"> </span>execute-html
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>execute-html:<span class="w"> </span>venv
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span>.<span class="w"> </span><span class="k">$(</span>VENV<span class="k">)</span>/activate<span class="p">;</span><span class="w"> </span><span class="se">\</span>
