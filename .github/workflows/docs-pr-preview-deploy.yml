@@ -1,0 +1,90 @@
+name: Docs PR preview - deploy
+
+on:
+  workflow_run:
+    workflows: ["Docs PR preview - build"]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy:
+    if: >-
+      ${{ github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.event == 'pull_request' &&
+          github.event.workflow_run.pull_requests[0].number }}
+    name: Deploy preview to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract PR info
+        id: pr
+        run: |
+          echo "pr_number=${{ github.event.workflow_run.pull_requests[0].number }}" >> $GITHUB_OUTPUT
+          echo "head_label=${{ github.event.workflow_run.pull_requests[0].head.label }}" >> $GITHUB_OUTPUT
+
+      - name: Download artifact from build run
+        uses: dawidd6/action-download-artifact@ac66b43f0e6a346234dd65d4d0c8fbb31cb316e5
+        with:
+          workflow: docs-pr-preview-build.yml
+          run_id: ${{ github.event.workflow_run.id }}
+          name: site
+          path: ./site
+
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: ${{ github.repository }}
+          path: preview
+
+      - name: Prepare gh-pages branch
+        working-directory: preview
+        run: |
+          git fetch origin gh-pages || true
+          if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
+            git checkout gh-pages
+          else
+            git checkout --orphan gh-pages
+            find . -mindepth 1 -maxdepth 1 -not -name '.git' -exec rm -rf {} +
+          fi
+
+      - name: Prepare directory for this PR
+        run: |
+          mkdir -p preview/pr-${{ steps.pr.outputs.pr_number }}
+          rm -rf preview/pr-${{ steps.pr.outputs.pr_number }}/*
+          cp -a site/. preview/pr-${{ steps.pr.outputs.pr_number }}/
+
+      - name: Commit and push
+        working-directory: preview
+        run: |
+          git config user.name "kubestellar-bot"
+          git config user.email "no-reply@kubestellar.io"
+          git pull --rebase
+          git add .
+          git commit -m "Update preview for PR #${{ steps.pr.outputs.pr_number }}" || echo "No changes to commit"
+          git push
+
+      - name: Compose preview URL
+        id: url
+        run: |
+          REPO="${{ github.repository }}"
+          OWNER="${{ github.repository_owner }}"
+          if [ "$OWNER" = "kubestellar" ]; then
+            URL="https://docs.kubestellar.io/pr-${{ steps.pr.outputs.pr_number }}/"
+          else
+            NAME="${REPO#*/}"
+            URL="https://${OWNER}.github.io/${NAME}/pr-${{ steps.pr.outputs.pr_number }}/"
+          fi
+          echo "url=$URL" >> $GITHUB_OUTPUT
+
+      - name: Comment preview link on PR
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043
+        with:
+          issue-number: ${{ steps.pr.outputs.pr_number }}
+          body: |
+            Preview of this docs change is available at:
+            
+            ${{ steps.url.outputs.url }}
+            
+            This link will update when new commits are pushed to this PR.

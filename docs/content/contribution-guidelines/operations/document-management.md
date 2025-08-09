@@ -55,6 +55,29 @@ You may preview possible changes to the website either
 (b) letting GitHub render a revised website from a branch in your fork of the kubestellar repository (which is highly recommended when making a PR that modifies the website).
 
 
+### Automatic PR Preview (recommended)
+When a Pull Request that touches documentation files is opened, GitHub Actions automatically builds a preview of the website from the PR’s code and posts a comment with a preview URL on the PR. The preview updates on each new commit.
+
+- What triggers it: any PR that modifies files under `docs/**` or any `*.md` file.
+- Where it runs: the build runs on the PR (safe for forks), and a separate deployment job runs in the target repository context to publish the preview.
+- Where it publishes: into this repository’s `gh-pages` branch under a per‑PR path `pr-<number>/`, viewable at `https://docs.kubestellar.io/pr-<number>/`.
+
+Under the hood this uses two workflows:
+
+- `.github/workflows/docs-pr-preview-build.yml`: builds the site with MkDocs and uploads it as a workflow artifact.
+- `.github/workflows/docs-pr-preview-deploy.yml`: reacts to the successful build, downloads the artifact, publishes it into `gh-pages/pr-<number>/`, and comments the preview link on the PR.
+
+#### Maintainer setup
+No additional secrets or personal tokens are required. This preview flow uses the built‑in `GITHUB_TOKEN` in the base repository context.
+
+Ensure the following (already true for our site):
+
+1. The `gh-pages` branch exists and is configured for GitHub Pages for `docs.kubestellar.io`.
+2. Do not remove the `pr-*` directories under `gh-pages`; they are used for PR previews and are independent of the `mike` managed version folders.
+
+No action is required from contributors beyond opening the PR; the preview link will appear automatically in a PR comment.
+
+
 ### Serving up documents globally from a fork of the repository via GitHub
 You can take advantage of [the "Generate and Push Docs" GitHub Actions workflow](https://github.com/kubestellar/kubestellar/blob/v{{ config.ks_latest_release }}/.github/workflows/docs-gen-and-push.yml)---invoked either explicitly in the GitHub web UI or implicitly by a branch naming convention---to create an online, shareable rendering of the website.
 This is particularly useful for documentation PRs, as it allows you to share a preview of your proposed changes directly via a URL to a working website.

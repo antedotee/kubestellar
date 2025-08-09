@@ -83,3 +83,13 @@ actions/upload-artifact:
   sha-url: https://github.com/actions/upload-artifact/commit/ea165f8d65b6e75b540449e92b4886f43607fa02
   tag: v4
   tag-url: https://github.com/actions/upload-artifact/tree/v4
+"dawidd6/action-download-artifact":
+  sha: ac66b43f0e6a346234dd65d4d0c8fbb31cb316e5
+  sha-url: https://github.com/dawidd6/action-download-artifact/commit/ac66b43f0e6a346234dd65d4d0c8fbb31cb316e5
+  tag: v11
+  tag-url: https://github.com/dawidd6/action-download-artifact/tree/v11
+"peter-evans/create-or-update-comment":
+  sha: 71345be0265236311c031f5c7866368bd1eff043
+  sha-url: https://github.com/peter-evans/create-or-update-comment/commit/71345be0265236311c031f5c7866368bd1eff043
+  tag: v4.0.0
+  tag-url: https://github.com/peter-evans/create-or-update-comment/tree/v4.0.0
