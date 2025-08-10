@@ -46,7 +46,7 @@ jobs:
           site="${site,,}"
           echo "site=$site" >>$GITHUB_OUTPUT
           echo "site=<$site> version=<$version>"
-          sleep 30
+          sleep 120
           cat <<EOF
           Because the website does not actually get updated until after the
           completion of an asynchronous workflow named
@@ -61,7 +61,6 @@ jobs:
           curl -IL "https://${site}/${version}/"
 
         id: extract_branch
-        if: github.event_name != 'pull_request' && github.event_name != 'push'
 
       - name: echo workflow_dispatch branch name et cetera
         run: |
@@ -74,12 +73,12 @@ jobs:
         with:
           website_url: https://${{ steps.extract_branch.outputs.site }}/${{ steps.extract_branch.outputs.version }}
           include_url_prefix: https://${{ steps.extract_branch.outputs.site }}/${{ steps.extract_branch.outputs.version }}
-          exclude_url_prefix: "mailto:,https://drive.google.com"
-          exclude_url_contained: "#__,/.,.svg"
+          exclude_url_prefix: "mailto:,https://drive.google.com,https://github.com"
+          exclude_url_contained: "#__,/.,.svg,raw/main,edit/main"
           resolve_before_filtering: "true"
           verbose: "true"
-          max_retry_time: 30
-          max_retries: 5
+          max_retry_time: 60
+          max_retries: 8
           max_depth: 4
         if: github.event_name != 'pull_request' && github.event_name != 'push'
 
@@ -92,28 +91,30 @@ jobs:
         with:
           website_url: https://docs.kubestellar.io/${{ github.event.pull_request.base.ref }}
           include_url_prefix: https://docs.kubestellar.io/${{ github.event.pull_request.base.ref }}
-          exclude_url_prefix: "mailto:,https://drive.google.com"
-          exclude_url_contained: "#__,/.,.svg"
+          exclude_url_prefix: "mailto:,https://drive.google.com,https://github.com"
+          exclude_url_contained: "#__,/.,.svg,raw/main,edit/main"
           resolve_before_filtering: "true"
           verbose: "true"
-          max_retry_time: 30
-          max_retries: 5
+          max_retry_time: 60
+          max_retries: 8
           max_depth: 4
         if: github.event_name == 'pull_request'
 
-      - name: echo push branch name
-        run: echo push - running on branch ${{ github.event.push.base.ref }}
+      - name: echo push site and version
+        run: |
+          echo push - running on site ${{ steps.extract_branch.outputs.site }}
+          echo push - running on version ${{ steps.extract_branch.outputs.version }}
         if: github.event_name == 'push'
 
       - uses: ScholliYT/Broken-Links-Crawler-Action@b3fb123879e5a6a854d6fda5c33df2d94d41092c
         with:
-          website_url: https://docs.kubestellar.io/${{ github.event.push.base.ref }}
-          include_url_prefix: https://docs.kubestellar.io/${{ github.event.push.base.ref }}
-          exclude_url_prefix: "mailto:,https://drive.google.com"
-          exclude_url_contained: "#__,/.,.svg"
+          website_url: https://${{ steps.extract_branch.outputs.site }}/${{ steps.extract_branch.outputs.version }}
+          include_url_prefix: https://${{ steps.extract_branch.outputs.site }}/${{ steps.extract_branch.outputs.version }}
+          exclude_url_prefix: "mailto:,https://drive.google.com,https://github.com"
+          exclude_url_contained: "#__,/.,.svg,raw/main,edit/main"
           resolve_before_filtering: "true"
           verbose: "true"
-          max_retry_time: 30
-          max_retries: 5
+          max_retry_time: 60
+          max_retries: 8
           max_depth: 4
         if: github.event_name == 'push'
