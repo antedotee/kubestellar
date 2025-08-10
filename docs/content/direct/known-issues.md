@@ -14,7 +14,7 @@ The symptom is `kind` cluster(s) that get created but fail to get their job done
 
 ## Authorization fail for Helm fetching chart from ghcr
 
-The symptom is that attempting to instantiate the core Helm chart gets an authorization failure. See [Authorization failure while fetching Helm chart from ghcr.io](knownissue-helm-ghcr.md).
+The symptom is that attempting to instantiate the core Helm chart gets an authorization failure. See [Authorization failure while fetching Helm chart from ghcr.io](get-started/knownissue-wsl-ghcr-helm.md).
 
 ## Missing results in a CombinedStatus object
 

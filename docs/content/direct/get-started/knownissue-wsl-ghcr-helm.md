@@ -3,7 +3,7 @@
 ## Description of the Issue
 
 When following the
-[Getting Started recipe](get-started.md) you might get a failure from
+[Getting Started recipe](../get-started.md) you might get a failure from
 the command to instantiate KubeStellar's core Helm chart. The error
 message is as follows.
 
@@ -70,3 +70,5 @@ KubeStellar setup does not require credentials for any registry ---
 except for pull rate limit considerations. The KubeStellar setup
 _does_ involve using some images from DockerHub, and DockerHub imposes
 a strict rate limit on non-logged-in users.
+
+
