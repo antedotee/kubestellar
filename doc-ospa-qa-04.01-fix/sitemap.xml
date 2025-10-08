@@ -473,6 +473,14 @@
          
     </url>
     <url>
+         <loc>https://docs.kubestellar.io/doc-ospa-qa-04.01-fix/direct/subprojects/</loc>
+         <lastmod>2025-10-08</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-ospa-qa-04.01-fix/en/direct/subprojects/"/>
+         <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-ospa-qa-04.01-fix/fr/direct/subprojects/"/>
+         
+    </url>
+    <url>
          <loc>https://docs.kubestellar.io/doc-ospa-qa-04.01-fix/direct/teardown/</loc>
          <lastmod>2025-10-08</lastmod>
          <changefreq>daily</changefreq>
