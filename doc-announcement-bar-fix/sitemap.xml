@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/"/>
@@ -10,7 +10,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/readme/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/readme/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/readme/"/>
@@ -18,7 +18,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/_index/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/_index/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/_index/"/>
@@ -26,7 +26,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/gsoc/2025/ideas/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/gsoc/2025/ideas/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/gsoc/2025/ideas/"/>
@@ -34,7 +34,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/kubecon/eu2025/contribfest/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/kubecon/eu2025/contribfest/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/kubecon/eu2025/contribfest/"/>
@@ -42,7 +42,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/partners/argocd/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/partners/argocd/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/partners/argocd/"/>
@@ -50,7 +50,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/partners/fluxcd/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/partners/fluxcd/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/partners/fluxcd/"/>
@@ -58,7 +58,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/partners/kyverno/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/partners/kyverno/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/partners/kyverno/"/>
@@ -66,7 +66,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/partners/mvi/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/partners/mvi/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/partners/mvi/"/>
@@ -74,7 +74,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/partners/openziti/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/partners/openziti/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/partners/openziti/"/>
@@ -82,7 +82,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/Community/partners/turbonomic/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/Community/partners/turbonomic/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/Community/partners/turbonomic/"/>
@@ -90,7 +90,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/common-subs/coming-soon/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/common-subs/coming-soon/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/common-subs/coming-soon/"/>
@@ -98,7 +98,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/common-subs/placeholder/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/common-subs/placeholder/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/common-subs/placeholder/"/>
@@ -106,7 +106,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/coc-inc/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/coc-inc/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/coc-inc/"/>
@@ -114,7 +114,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/contributing-inc/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/contributing-inc/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/contributing-inc/"/>
@@ -122,7 +122,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/contributor_ladder/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/contributor_ladder/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/contributor_ladder/"/>
@@ -130,7 +130,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/governance-inc/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/governance-inc/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/governance-inc/"/>
@@ -138,7 +138,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/license-inc/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/license-inc/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/license-inc/"/>
@@ -146,7 +146,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/onboarding-inc/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/onboarding-inc/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/onboarding-inc/"/>
@@ -154,7 +154,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/operations/code-management/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/operations/code-management/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/operations/code-management/"/>
@@ -162,7 +162,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/operations/docs-styleguide/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/operations/docs-styleguide/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/operations/docs-styleguide/"/>
@@ -170,7 +170,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/operations/document-management/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/operations/document-management/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/operations/document-management/"/>
@@ -178,7 +178,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/operations/testing-doc-prs/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/operations/testing-doc-prs/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/operations/testing-doc-prs/"/>
@@ -186,7 +186,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/security/security-inc/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/security/security-inc/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/security/security-inc/"/>
@@ -194,7 +194,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/contribution-guidelines/security/security_contacts-inc/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/contribution-guidelines/security/security_contacts-inc/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/contribution-guidelines/security/security_contacts-inc/"/>
@@ -202,7 +202,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/acquire-hosting-cluster/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/acquire-hosting-cluster/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/acquire-hosting-cluster/"/>
@@ -210,7 +210,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/architecture/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/architecture/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/architecture/"/>
@@ -218,7 +218,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/argo-to-wds1/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/argo-to-wds1/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/argo-to-wds1/"/>
@@ -226,7 +226,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/authorization/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/authorization/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/authorization/"/>
@@ -234,7 +234,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/binding/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/binding/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/binding/"/>
@@ -242,7 +242,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/combined-status/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/combined-status/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/combined-status/"/>
@@ -250,7 +250,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/contribute/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/contribute/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/contribute/"/>
@@ -258,7 +258,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/control/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/control/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/control/"/>
@@ -266,7 +266,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/core-chart-argocd/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/core-chart-argocd/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/core-chart-argocd/"/>
@@ -274,7 +274,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/core-chart/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/core-chart/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/core-chart/"/>
@@ -282,7 +282,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/example-scenarios/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/example-scenarios/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/example-scenarios/"/>
@@ -290,7 +290,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/galaxy-intro/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/galaxy-intro/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/galaxy-intro/"/>
@@ -298,7 +298,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/get-started/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/get-started/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/get-started/"/>
@@ -306,7 +306,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/init-hosting-cluster/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/init-hosting-cluster/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/init-hosting-cluster/"/>
@@ -314,7 +314,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/installation-errors/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/installation-errors/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/installation-errors/"/>
@@ -322,7 +322,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/its/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/its/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/its/"/>
@@ -330,7 +330,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/known-issues/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/known-issues/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/known-issues/"/>
@@ -338,7 +338,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/knownissue-collector-miss/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/knownissue-collector-miss/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/knownissue-collector-miss/"/>
@@ -346,7 +346,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/knownissue-cpu-insufficient-for-its1/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/knownissue-cpu-insufficient-for-its1/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/knownissue-cpu-insufficient-for-its1/"/>
@@ -354,7 +354,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/knownissue-helm-ghcr/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/knownissue-helm-ghcr/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/knownissue-helm-ghcr/"/>
@@ -362,7 +362,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/knownissue-kflex-extension/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/knownissue-kflex-extension/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/knownissue-kflex-extension/"/>
@@ -370,7 +370,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/knownissue-kind-config/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/knownissue-kind-config/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/knownissue-kind-config/"/>
@@ -378,7 +378,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/kubeflex-intro/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/kubeflex-intro/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/kubeflex-intro/"/>
@@ -386,7 +386,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/observability/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/observability/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/observability/"/>
@@ -394,7 +394,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/packaging/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/packaging/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/packaging/"/>
@@ -402,7 +402,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/pr-signoff/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/pr-signoff/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/pr-signoff/"/>
@@ -410,7 +410,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/pre-reqs/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/pre-reqs/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/pre-reqs/"/>
@@ -418,7 +418,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/release-notes/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/release-notes/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/release-notes/"/>
@@ -426,7 +426,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/release-testing/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/release-testing/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/release-testing/"/>
@@ -434,7 +434,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/release/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/release/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/release/"/>
@@ -442,7 +442,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/roadmap/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/roadmap/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/roadmap/"/>
@@ -450,7 +450,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/setup-limitations/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/setup-limitations/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/setup-limitations/"/>
@@ -458,7 +458,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/setup-overview/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/setup-overview/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/setup-overview/"/>
@@ -466,7 +466,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/start-from-ocm/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/start-from-ocm/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/start-from-ocm/"/>
@@ -474,7 +474,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/teardown/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/teardown/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/teardown/"/>
@@ -482,7 +482,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/testing/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/testing/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/testing/"/>
@@ -490,7 +490,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/transforming/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/transforming/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/transforming/"/>
@@ -498,7 +498,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/troubleshooting/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/troubleshooting/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/troubleshooting/"/>
@@ -506,7 +506,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/ui-intro/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/ui-intro/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/ui-intro/"/>
@@ -514,7 +514,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/usage-limitations/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/usage-limitations/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/usage-limitations/"/>
@@ -522,7 +522,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/user-guide-intro/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/user-guide-intro/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/user-guide-intro/"/>
@@ -530,7 +530,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/wds/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/wds/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/wds/"/>
@@ -538,7 +538,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/wec-registration/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/wec-registration/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/wec-registration/"/>
@@ -546,7 +546,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/wec/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/wec/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/wec/"/>
@@ -554,7 +554,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/direct/images/image-files-readme/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/direct/images/image-files-readme/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/direct/images/image-files-readme/"/>
@@ -562,7 +562,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/ui-docs/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/ui-docs/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/ui-docs/"/>
@@ -570,7 +570,7 @@
     </url>
     <url>
          <loc>https://docs.kubestellar.io/doc-announcement-bar-fix/ui-docs/ui-overview/</loc>
-         <lastmod>2025-10-09</lastmod>
+         <lastmod>2025-10-13</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://docs.kubestellar.io/doc-announcement-bar-fix/en/ui-docs/ui-overview/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://docs.kubestellar.io/doc-announcement-bar-fix/fr/ui-docs/ui-overview/"/>
