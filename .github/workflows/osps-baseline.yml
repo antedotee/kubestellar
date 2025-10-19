@@ -11,7 +11,7 @@ on:
 jobs:
   scan:
     # Runs only when the selected branch is 'osps'
-    if: github.ref == 'refs/heads/osps-manual-workflow-check'
+    if: github.ref == 'osps-manual-workflow-check'
     runs-on: ubuntu-latest
 
     steps:
