@@ -1,34 +1,33 @@
 name: OSPS Baseline Scan
 
 on:
-    workflow_dispatch:
-        branches:
-            - my-scan-branch
-        inputs:
-            reason:
-                description: "Reason for running the scan"
-                required: false
-                default: "Manual trigger"
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for running the scan"
+        required: false
+        default: "Manual trigger"
 
 jobs:
-    scan:
-        if: github.ref == 'refs/heads/my-scan-branch'
-        runs-on: ubuntu-latest
+  scan:
+    # Runs only when the selected branch is 'my-scan-branch'
+    if: github.ref == 'refs/heads/my-scan-branch'
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Pull the pvtr-github-repo image
-              run: docker pull eddieknight/pvtr-github-repo:latest
+      - name: Pull the pvtr-github-repo image
+        run: docker pull eddieknight/pvtr-github-repo:latest
 
-            - name: Add GitHub Secret to config file so it is protected in outputs
-              run: |
-                  sed -i 's/{{ TOKEN }}/${{ secrets.TOKEN }}/g' ${{ github.workspace }}/.github/pvtr-config.yml
+      - name: Add GitHub Secret to config file so it is protected in outputs
+        run: |
+          sed -i 's/{{ TOKEN }}/${{ secrets.TOKEN }}/g' ${{ github.workspace }}/.github/pvtr-config.yml
 
-            - name: Scan all repos specified in .github/pvtr-config.yml
-              run: |
-                  docker run --rm \
-                    -v ${{ github.workspace }}/.github/pvtr-config.yml:/.privateer/config.yml \
-                    -v ${{ github.workspace }}/docker_output:/evaluation_results \
-                    eddieknight/pvtr-github-repo:latest
+      - name: Scan all repos specified in .github/pvtr-config.yml
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}/.github/pvtr-config.yml:/.privateer/config.yml \
+            -v ${{ github.workspace }}/docker_output:/evaluation_results \
+            eddieknight/pvtr-github-repo:latest
