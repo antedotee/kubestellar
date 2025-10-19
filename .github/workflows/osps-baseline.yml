@@ -10,8 +10,8 @@ on:
 
 jobs:
   scan:
-    # Runs only when the selected branch is 'my-scan-branch'
-    if: github.ref == 'refs/heads/my-scan-branch'
+    # Runs only when the selected branch is 'osps'
+    if: github.ref == 'refs/heads/osps-manual-workflow-branch'
     runs-on: ubuntu-latest
 
     steps:
