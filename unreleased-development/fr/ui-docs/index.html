@@ -4333,8 +4333,8 @@ Then go through one of the setup options below:
 - <a href="#local-setup-with-docker-compose">Local Setup with Docker Compose</a></p>
 <h3 id="local-setup">Local Setup<a class="headerlink" href="#local-setup" title="Permanent link">#</a></h3>
 <h4 id="step-1-create-env-file-for-frontend-configuration">Step 1: Create <code>.env</code> File for Frontend Configuration<a class="headerlink" href="#step-1-create-env-file-for-frontend-configuration" title="Permanent link">#</a></h4>
-<p>To configure the frontend, copy the <code>example.env</code> file to a <code>.env</code> file in the project root directory (where <code>package.json</code> is located).</p>
-<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp<span class="w"> </span>example.env<span class="w"> </span>.env
+<p>To configure the frontend, copy the <code>.env.example</code> file to a <code>.env</code> file in the project root directory (where <code>package.json</code> is located).</p>
+<div class="language-bash highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
 </code></pre></div>
 <p><strong>Example <code>.env</code> file:</strong>  </p>
 <div class="language-text highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>VITE_BASE_URL=http://localhost:4000
@@ -4343,7 +4343,7 @@ Then go through one of the setup options below:
 </code></pre></div>
 <blockquote>
 <p>[!NOTE] 
-This is because <code>.env</code> files are intended to be a personal environment configuration file. The included <code>example.env</code> in the repo is a standard that most other node projects include for the same purpose. You rename the file to <code>.env</code> and then change its contents to align with your system and personal needs.</p>
+This is because <code>.env</code> files are intended to be a personal environment configuration file. The included <code>.env.example</code> in the repo is a standard that most other node projects include for the same purpose. You rename the file to <code>.env</code> and then change its contents to align with your system and personal needs.</p>
 </blockquote>
 <h5 id="tracking-application-version-and-git-commit-hash">Tracking Application Version and Git Commit Hash<a class="headerlink" href="#tracking-application-version-and-git-commit-hash" title="Permanent link">#</a></h5>
 <p>KubestellarUI uses environment variables to track the app version and the current Git commit hash.  </p>
